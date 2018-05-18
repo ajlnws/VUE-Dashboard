@@ -1,12 +1,18 @@
 <template>
   <header id="header" class="app-header navbar">
-    <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button" @click="mobileSidebarToggle">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <b-link class="navbar-brand" to="#"></b-link>
+
+    <div class="mobile-nav">
+      <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button" @click="mobileSidebarToggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" @click="sidebarToggle">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <b-link class="navbar-brand" to="#"></b-link>
+
     <b-navbar-nav class="d-md-down-none">
       <b-nav-item class="px-3">Dashboard</b-nav-item>
       <b-nav-item class="px-3">Users</b-nav-item>
@@ -25,7 +31,7 @@
       </b-nav-item>
       <HeaderDropdown/>
     </b-navbar-nav>
-    <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" @click="asideToggle">
+    <button class="navbar-toggler aside-menu-toggler" type="button" @click="asideToggle">
       <span class="navbar-toggler-icon"></span>
     </button>
   </header>

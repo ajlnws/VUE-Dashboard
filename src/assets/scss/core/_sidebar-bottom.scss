@@ -1,0 +1,39 @@
+.sidebar-bottom.sidebar-fixed {
+
+  @include media-breakpoint-down(md) {
+
+    .app-header .mobile-nav {
+      position:fixed;
+      height: $sidebar-height;
+      color: $navbar-color;
+      background: $navbar-bg;
+      width: 100%;
+      bottom: 0;
+      @include borders($navbar-bottom-border);
+      border-bottom: none;
+    }
+
+    .sidebar {
+      bottom: $sidebar-height;
+      height: calc(100vh - (#{$sidebar-height*2}) );
+      overflow: auto;
+
+      .sidebar-nav {
+          display: flex;
+          max-height: 100%;
+          .nav {
+              min-height: auto;
+              max-height: 100%;
+              align-self: flex-end;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              padding-bottom: $sidebar-height + 20px;
+              padding-top: $sidebar-height + 20px;
+          }
+      }
+    }
+
+  }
+
+
+}
